@@ -3,7 +3,7 @@ package pl.coderslab.charity.category;
 import javax.persistence.*;
 import java.util.Objects;
 
-@Entity
+@Entity(name = "categories")
 public class CategoryEntity {
 
     @Id
