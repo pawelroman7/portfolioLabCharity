@@ -4,4 +4,5 @@ import java.util.Set;
 
 public interface CategoryService {
     Set<CategoryEntity> findAllCategories();
+    CategoryEntity findById(Long id);
 }

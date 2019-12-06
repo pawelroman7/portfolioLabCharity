@@ -24,4 +24,10 @@ public class DonationServiceImpl implements DonationService {
     public int getNumberOfDonations() {
         return findAllDonations().size();
     }
+
+    @Override
+    public void saveDonation(DonationEntity donationEntity) {
+        donationRepository.save(donationEntity);
+
+    }
 }

@@ -26,4 +26,10 @@ public class InstitutionServiceImpl implements InstitutionService{
     public int getNumberOfInstitutions() {
         return findAllInstitutions().size();
     }
+
+    @Override
+    public InstitutionEntity findById(Long id) {
+
+        return institutionRepository.findById(id).orElseThrow(InstitutionNotFoundException::new);
+    }
 }

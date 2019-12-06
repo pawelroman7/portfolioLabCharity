@@ -18,7 +18,7 @@
         <li><a href="#" class="btn btn--without-border">O nas</a></li>
         <li><a href="#" class="btn btn--without-border">Fundacje i organizacje</a></li>
         <li>
-        <form:form action="/form" method="get" >
+        <form:form action="/form_step1" method="get">
             <input type="submit" class="btn btn--without-border" value="Przekaż dary">
         </form:form>
         <li><a href="#" class="btn btn--without-border">Kontakt</a></li>

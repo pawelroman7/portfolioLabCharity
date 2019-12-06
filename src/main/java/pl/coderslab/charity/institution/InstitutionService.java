@@ -6,4 +6,5 @@ public interface InstitutionService {
 
     Set<InstitutionEntity>findAllInstitutions();
     int getNumberOfInstitutions();
+    InstitutionEntity findById(Long id);
 }

@@ -18,4 +18,9 @@ public class CategoryServiceImpl implements CategoryService {
     public Set<CategoryEntity> findAllCategories() {
         return new HashSet<>(categoryRepository.findAll());
     }
+
+    @Override
+    public CategoryEntity findById(Long id) {
+        return categoryRepository.findById(id).orElseThrow(CategoryNotFoundException::new);
+    }
 }

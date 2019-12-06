@@ -11,6 +11,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>">
 </head>
 <body>
 <header class="header--main-page">
@@ -84,7 +85,7 @@
             <%@include file="../../../resources/images/signature.svg"%>
         </div>
     </div>
-    <div class="about-us--image"><img src="<c:url value="/resources/images/about-us.jpg"/>" alt="People in circle"/>
+    <div class="about-us--image"><img src="<c:url value="../../../resources/images/about-us.jpg"/>" alt="People in circle"/>
     </div>
 </section>
 

@@ -1,6 +1,7 @@
 package pl.coderslab.charity.donation;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.lang.Nullable;
 import pl.coderslab.charity.category.CategoryEntity;
 import pl.coderslab.charity.institution.InstitutionEntity;
 
@@ -17,20 +18,24 @@ public class DonationEntity {
     private Long id;
 
     @Column(name = "bags_quantity")
+    @Nullable
     private int quantity;
-
     @OneToMany
     private Set<CategoryEntity> categories;
-
     @OneToOne
     private InstitutionEntity institution;
-
+    @Nullable
     private String street;
+    @Nullable
     private String city;
+    @Nullable
     private String zipCode;
+    @Nullable
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;
+    @Nullable
     private LocalTime pickUpTime;
+    @Nullable
     private String pickUpComment;
 
     public Long getId() {
