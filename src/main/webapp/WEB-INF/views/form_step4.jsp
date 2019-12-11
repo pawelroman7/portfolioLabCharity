@@ -25,23 +25,24 @@
         </div>
             <div data-step="4">
                 <h3>Podaj adres oraz termin odbioru rzecz przez kuriera:</h3>
-                <form:form modelAttribute="donationFourthStep" method="post" action="/form_step4">
+
+
 
                 <div class="form-section form-section--columns">
+
                     <div class="form-section--column">
+
                         <h4>Adres odbioru</h4>
-                        <div class="form-group form-group--inline">
+                    <form:form modelAttribute="donationFourthStep" method="post" action="/form_step4">
                             <label> Ulica </label>
-                            <form:input path="street"/>
-                        </div>
-                        <div class="form-group form-group--inline">
+                            <form:input path="street" cssClass="form-group form-group--inline"/>
                             <label> Miasto </label>
-                            <form:input path="city"/>
-                        </div>
-                        <div class="form-group form-group--inline">
+                            <form:input path="city" cssClass="form-group form-group--inline"/>
+
+
                             <label> Kod pocztowy </label>
-                            <form:input path="zipCode"/>
-                        </div>
+                            <form:input path="zipCode" cssClass="form-group form-group--inline"/>
+
                         <%--<div class="form-group form-group--inline">
                             <label>
                                 Numer telefonu <input type="phone" name="phone" />
@@ -50,28 +51,23 @@
                     </div>
                     <div class="form-section--column">
                         <h4>Termin odbioru</h4>
-                        <div class="form-group form-group--inline">
-                            <label> Data </label>
-                            <form:input type="date" path="pickUpDate"/>
-                        </div>
-                        <div class="form-group form-group--inline">
-                            <label> Godzina </label>
-                            <form:input type="time" path="pickUpTime" />
-                        </div>
-                        <div class="form-group form-group--inline">
-                            <label>
-                                Uwagi dla kuriera
-                            </label>
-                            <form:textarea path="pickUpComment"/>
-                        </div>
+                        <label> Data </label>
+                        <form:input type="date" path="pickUpDate" cssClass="form-group form-group--inline"/>
+                        <label> Godzina </label>
+                        <form:input type="time" path="pickUpTime" cssClass="form-group form-group--inline" />
+                        <label>Uwagi dla kuriera</label>
+                        <form:textarea path="pickUpComment" cssClass="form-group form-group--inline"/>
                     </div>
+                    <form:hidden path="categories"/>
+                    <form:hidden path="quantity"/>
+                    <form:hidden path="institution"/>
                 </div>
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
-                    <button type="button" class="btn next-step">Dalej</button>
+                    <input type="submit" class="btn next-step" value="Dalej"/>
                 </div>
+                </form:form>
             </div>
-        </form:form>
     </div>
 </section>
 <jsp:include page="footer.jsp"/>

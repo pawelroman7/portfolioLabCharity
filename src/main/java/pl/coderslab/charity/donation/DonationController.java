@@ -79,15 +79,16 @@ public class DonationController {
         return "form_step4";
     }
     @PostMapping("/form_step4")
-    public String saveDonation(@ModelAttribute(name = "donationFourthStep") DonationEntity donationEntity, BindingResult result, Model model){
+    public String saveFourthStep(@ModelAttribute(name = "donationFourthStep") DonationEntity donationEntity, BindingResult result, Model model){
         model.addAttribute("donationFinal", donationEntity);
         return "form-confirmation";
     }
 
     @PostMapping("/saveDonation")
-    public String saveDonation(@ModelAttribute(name = "donationFinal")DonationEntity donationEntity, BindingResult bindingResult){
+    public String saveDonation(@ModelAttribute(name = "donationFinal") DonationEntity donationEntity, BindingResult result){
+        System.out.println(donationEntity);
         donationService.saveDonation(donationEntity);
-        return "form-confirmation";
+        return "index";
     }
 
     @ModelAttribute("categories")

@@ -10,15 +10,13 @@
 <section class="form--steps">
     <div class="form--steps-instructions">
         <div class="form--steps-container">
-            <!-- STEP 6 -->
             <div data-step="5">
                 <h3>Podsumowanie Twojej darowizny</h3>
-                <form:form modelAttribute="donationFinal" method="post" action="/saveDonation">
                 <div class="summary">
                     <div class="form-section">
                         <h4>Oddajesz:</h4>
+                        <form:form modelAttribute="donationFinal" method="post" action="/saveDonation">
                         <ul>
-
                                 <li>
                                     <span class="icon icon-bag"></span>
                                     <span class="summary--text">
@@ -30,9 +28,7 @@
                             </c:forEach>
                             <li>
                                 <span class="icon icon-hand"></span>
-                                <span class="summary--text"
-                                >Dla fundacji: ${donationFinal.institution.name}</span
-                                >
+                                <span class="summary--text">Dla fundacji: ${donationFinal.institution.name}</span>
                             </li>
                         </ul>
                     </div>
@@ -58,6 +54,16 @@
                         </div>
                     </div>
                 </div>
+
+                <form:hidden path="institution"/>
+                <form:hidden path="categories"/>
+                <form:hidden path="quantity"/>
+                <form:hidden path="pickUpComment"/>
+                <form:hidden path="pickUpTime"/>
+                <form:hidden path="pickUpDate"/>
+                <form:hidden path="zipCode"/>
+                <form:hidden path="city"/>
+                <form:hidden path="street"/>
 
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
